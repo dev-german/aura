@@ -93,6 +93,39 @@ const AuraResults = ({ name, birthdate, onReset }) => {
         </div>
       </div>
 
+      {/* Call to Action - Sesión 1:1 */}
+      <div className="glass-panel" style={{ 
+        marginTop: '3rem', 
+        padding: '2rem',
+        background: 'rgba(167, 112, 239, 0.15)',
+        borderColor: 'rgba(167, 112, 239, 0.5)',
+        textAlign: 'center' 
+      }}>
+        <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', color: '#fff' }}>
+          Tu mapa aún está incompleto... 🗺️
+        </h3>
+        
+        <p style={{ marginBottom: '1.5rem', lineHeight: '1.6', color: '#e0e0e0' }}>
+          ¿Sientes que esta información resonó contigo? Prepárate, porque solo has visto la punta del iceberg (3 de tus 5 números clave).<br/><br/>
+          Para entender realmente tus bloqueos y potenciar tu luz, necesitas conocer tu mapa completo. Descubrir los 5 puntos a profundidad es el mapa que te guiará para dejar de luchar y empezar a crear desde tu verdadero Ser.
+        </p>
+
+        <a 
+          href={`https://wa.me/51989360251?text=${encodeURIComponent(`Hola, acabo de ver mi Mapa del Alma (Esencia: ${results.esencia.number}) y quiero agendar mi Carta Numerológica Personal (Sesión 1:1).`)}`}
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="btn-primary"
+          style={{ 
+            display: 'inline-block', 
+            textDecoration: 'none', 
+            background: 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+            boxShadow: '0 4px 15px rgba(37, 211, 102, 0.3)'
+          }}
+        >
+          Quiero mi Carta Numerológica Personal (Sesión 1:1)
+        </a>
+      </div>
+
       <button className="btn-secondary" onClick={onReset} style={{ marginTop: '2rem' }}>
         Trazar otro Mapa
       </button>
