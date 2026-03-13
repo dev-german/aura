@@ -66,7 +66,7 @@ const AuraForm = ({ onSubmit }) => {
           style={{ opacity: isFormValid ? 1 : 0.6, cursor: isFormValid ? 'pointer' : 'not-allowed' }}
           disabled={!isFormValid}
         >
-          Descubrir mi Aura
+          Trazar Mapa de mi Alma
         </button>
       </form>
     </div>

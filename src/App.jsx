@@ -18,7 +18,7 @@ function App() {
     <>
       {!userData && (
         <div style={{ textAlign: 'center', width: '100%', maxWidth: '400px' }}>
-          <h1 className="title">Aura</h1>
+          <h1 className="title">Mapa de tu Alma</h1>
           <p className="subtitle">Descubre tus números de vida</p>
           <AuraForm onSubmit={handleFormSubmit} />
         </div>

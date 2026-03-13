@@ -12,7 +12,7 @@ const AuraResults = ({ name, birthdate, onReset }) => {
   if (!results) return null;
 
   const currentYear = new Date().getFullYear();
-  
+
   const timelineData = [
     {
       year: currentYear - 1,
@@ -39,7 +39,7 @@ const AuraResults = ({ name, birthdate, onReset }) => {
 
   return (
     <div className="glass-panel" style={{ width: '100%', maxWidth: '800px', animation: 'fadeIn 0.5s ease-out' }}>
-      <h2 className="title" style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>Tu Aura, {name.split(' ')[0]}</h2>
+      <h2 className="title" style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>El Mapa de tu alma, {name.split(' ')[0]}</h2>
       <p className="subtitle" style={{ marginBottom: '2rem' }}>Estos son los números que guían tu camino</p>
 
       <div className="results-grid" style={{ marginBottom: '3rem' }}>
@@ -73,7 +73,7 @@ const AuraResults = ({ name, birthdate, onReset }) => {
         <p style={{ textAlign: 'center', marginBottom: '2.5rem', color: '#b0b0b0' }}>
           Descubre en qué punto de tu ciclo te encuentras y prepárate para el futuro.
         </p>
-        
+
         <div className="custom-timeline">
           {timelineData.map((item, index) => (
             <div key={index} className={`timeline-item ${item.active ? 'active' : ''}`}>
@@ -94,7 +94,7 @@ const AuraResults = ({ name, birthdate, onReset }) => {
       </div>
 
       <button className="btn-secondary" onClick={onReset} style={{ marginTop: '2rem' }}>
-        Consultar otro Aura
+        Trazar otro Mapa
       </button>
     </div>
   );
