@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-const AuraForm = ({ onSubmit }) => {
+const AuraForm = ({ onSubmit, title = 'Tu mapa de alma', submitLabel = 'Trazar mi mapa' }) => {
   const [name, setName] = useState('');
   const [date, setDate] = useState('');
 
@@ -28,7 +28,9 @@ const AuraForm = ({ onSubmit }) => {
   const isFormValid = name.trim().length > 0 && date.length === 10;
 
   return (
-    <div className="glass-panel">
+    <div className="form-panel">
+      <h2>{title}</h2>
+      <p className="form-intro">Empieza con tu nombre y fecha de nacimiento.</p>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label className="form-label" htmlFor="nameInput">Nombre completo</label>
@@ -53,22 +55,24 @@ const AuraForm = ({ onSubmit }) => {
             placeholder="DD/MM/YYYY"
             value={date}
             onChange={handleDateChange}
+            inputMode="numeric"
+            aria-describedby="date-hint"
             maxLength="10"
             required
             autoComplete="off"
           />
-          <span className="input-hint">Escribe los números seguidos, nosotros añadimos las barras.</span>
+          <span id="date-hint" className="input-hint">Día, mes y año. Las barras se añaden automáticamente.</span>
         </div>
 
         <button 
           type="submit" 
           className="btn-primary"
-          style={{ opacity: isFormValid ? 1 : 0.6, cursor: isFormValid ? 'pointer' : 'not-allowed' }}
           disabled={!isFormValid}
         >
-          Trazar Mapa de mi Alma
+          {submitLabel}
         </button>
       </form>
+      <p className="form-note">Tus datos se usan solo en este navegador.</p>
     </div>
   );
 };
